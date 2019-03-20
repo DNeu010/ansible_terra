@@ -14,6 +14,6 @@ resource "null_resource" "dev-hosts" {
     template_rendered = "${data.template_file.dev_hosts.rendered}"
   }
   provisioner "local-exec" {
-    command = "echo '${data.template_file.dev_hosts.rendered}' > /var/lib/jenkins/workspace/ansible_stuff/inventory/hosts"
+    command = "echo '${data.template_file.dev_hosts.rendered}' > /home/ubuntu/ansible_dn/inventory/hosts"
   }
 }
